@@ -45,16 +45,21 @@ var NavBar = $('.navbar ');
 /*------------------------------------- 2.Smooth scroll --------------------------------*/
 $(document).ready(function() {
     $('.redirect-btn, .navbar a').on('click', function(event) {
-        event.preventDefault();
-        var target = $(this.hash);
-        if ($(window).width() < 992) {
-            $('body,html').animate({
-                'scrollTop': target.offset().top - 68
-            }, 400);
-        } else {
-            $('body,html').animate({
-                'scrollTop': target.offset().top - 80
-            }, 400);
+        if(!(event.target.classList[1] == "menu-btn")){
+            event.preventDefault();
+            var target = $(this.hash);
+            if ($(window).width() < 992) {
+                $('body,html').animate({
+                    'scrollTop': target.offset().top - 68
+                }, 400);
+            } else {
+                $('body,html').animate({
+                    'scrollTop': target.offset().top - 80
+                }, 400);
+            }
+        }else{
+            // event.dispatchEvent();
+            console.log(event)
         }
         $('.navbar-collapse').removeClass('in');
         $('.navbar-toggle').addClass('collapsed');
