@@ -36,7 +36,7 @@ export default function Home() {
                   <span className="icon-bar mid"></span>
                   <span className="icon-bar btm"></span>
                </button>
-               <a href="#hero" className="site-logo navbar-brand"><img src="images/logo-light.png" alt="" className="img-responsive"/></a>
+               <a href="#hero" className="site-logo navbar-brand"><img src="images/ezo.png" alt="" className="logo" /></a>
             </div>
             <div id="navbarCollapse" className="collapse navbar-collapse ">
                <ul className="nav navbar-nav navbar-right " id="nav_bar">
