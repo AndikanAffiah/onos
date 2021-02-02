@@ -57,9 +57,6 @@ $(document).ready(function() {
                     'scrollTop': target.offset().top - 80
                 }, 400);
             }
-        }else{
-            // event.dispatchEvent();
-            console.log(event)
         }
         $('.navbar-collapse').removeClass('in');
         $('.navbar-toggle').addClass('collapsed');

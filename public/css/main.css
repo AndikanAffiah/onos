@@ -22,10 +22,10 @@
   justify-content: space-between; }
 
 .template-color {
-  color: #6E7FF3; }
+  color: #84f36e; }
 
 .template-bg {
-  background-color: #3D4E81;
+  background-color: #45813d;
   color: #fff; }
 
 .light-bg {
@@ -35,7 +35,7 @@
   background-color: #F1F5FF; }
 
 .gradient-bg, .banner:after, .contact-form {
-  background: linear-gradient(-225deg, #3D4E81 0%, #5753C9 60%, #6E7FF3 100%);
+  background: linear-gradient(-225deg, #45813d 0%, #67c953 60%, #84f36e 100%);
   color: #fff; }
 
 .gray-light-bg {
@@ -43,7 +43,7 @@
 
 body {
   font-family: 'Nunito', sans-serif;
-  color: #3D4E81; }
+  color: #45813d; }
 
 button {
   background-color: transparent; }
@@ -284,17 +284,17 @@ a, button {
   text-transform: uppercase; }
 
 .btn-alpha {
-  background: linear-gradient(-225deg, #3D4E81 0%, #6E7FF3 100%);
+  background: linear-gradient(-225deg, #45813d 0%, #84f36e 100%);
   color: #fff !important; }
   .btn-alpha:hover {
-    background: linear-gradient(225deg, #3D4E81 0%, #6E7FF3 100%); }
+    background: linear-gradient(225deg, #45813d 0%, #84f36e 100%); }
 
 .btn-white, .menu-btn {
   color: #fff;
   border: 2px solid #fff; }
   .btn-white:hover, .menu-btn:hover {
     background-color: #fff !important;
-    color: #3D4E81 !important; }
+    color: #45813d !important; }
 
 .t-burger {
   padding-top: 100px; }
@@ -341,20 +341,20 @@ a, button {
   background-color: #fff !important;
   border-color: #eee; }
   .navbar.sticky-header a {
-    color: #3D4E81 !important; }
+    color: #45813d !important; }
   .navbar.sticky-header .menu-btn {
-    background: linear-gradient(-225deg, #3D4E81 0%, #5753C9 52%, #6E7FF3 100%);
+    background: linear-gradient(-225deg, #45813d 0%, #67c953 52%, #84f36e 100%);
     color: #fff !important;
-    border-color: #6E7FF3; }
+    border-color: #84f36e; }
     .navbar.sticky-header .menu-btn:hover {
-      background: linear-gradient(225deg, #3D4E81 0%, #6E7FF3 100%); }
+      background: linear-gradient(225deg, #45813d 0%, #84f36e 100%); }
 
 @media (max-width: 991px) {
   .navbar-collapse {
-    background: linear-gradient(-225deg, #3D4E81 0%, #5753C9 60%, #6E7FF3 100%); }
+    background: linear-gradient(-225deg, #45813d 0%, #67c953 60%, #84f36e 100%); }
 
   .sticky-header .navbar-toggle .icon-bar {
-    background-color: #3D4E81; } }
+    background-color: #45813d; } }
 .navbar-nav > li > a {
   font-size: 0.85em;
   padding: 15px 10px;
@@ -362,13 +362,13 @@ a, button {
   font-weight: 800;
   color: #fff; }
   .navbar-nav > li > a:hover {
-    color: #6E7FF3; }
+    color: #84f36e; }
 
 .navbar-nav li.active a, .navbar-nav > li > a:focus, .navbar-nav > li > a:hover, .navbar-nav > li > a:active {
   background-color: transparent; }
 
 .navbar-nav li.active a {
-  color: #6E7FF3 !important; }
+  color: #84f36e !important; }
 
 .banner {
   border-bottom: 1px solid #f0f0f0;
@@ -450,7 +450,7 @@ div.timer {
   div.timer span {
     font-size: 0.3em;
     display: block;
-    color: #6E7FF3;
+    color: #84f36e;
     font-weight: 700; }
 
 .check-list h3 {
@@ -581,7 +581,7 @@ div.timer {
     position: absolute;
     width: 100vw;
     height: 1px;
-    background-color: #6E7FF3;
+    background-color: #84f36e;
     left: 50%;
     transform: translateX(-50%);
     bottom: 0; }
@@ -600,7 +600,7 @@ div.timer {
     position: absolute;
     height: 100%;
     width: 1px;
-    background-color: #6E7FF3;
+    background-color: #84f36e;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -618,7 +618,7 @@ div.timer {
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
   padding: 15px;
   position: relative;
-  border-left: 5px solid #6E7FF3; }
+  border-left: 5px solid #84f36e; }
   .road-content span.road-year {
     font-size: 4.7em;
     position: absolute;
@@ -662,17 +662,17 @@ div.timer {
   border-radius: 30px 60px 30px 60px; }
 
 .reviews .carousel-indicators li {
-  border-color: #6E7FF3; }
+  border-color: #84f36e; }
 
 .reviews .carousel-indicators li.active {
-  background-color: #6E7FF3; }
+  background-color: #84f36e; }
 
 .reviews {
   position: relative; }
   .reviews .media-left {
     padding-right: 40px; }
   .reviews i {
-    color: #6E7FF3; }
+    color: #84f36e; }
   .reviews .hudge-quote {
     position: absolute;
     font-size: 6em; }
@@ -772,7 +772,7 @@ div.timer {
       position: absolute;
       right: 23px;
       top: 19px;
-      color: #6E7FF3; }
+      color: #84f36e; }
   .faq .panel-heading div.collapsed {
     padding: 23px 23px 23px 75px; }
     .faq .panel-heading div.collapsed:after {
@@ -788,7 +788,7 @@ div.timer {
   position: absolute;
   left: 23px;
   top: 13px;
-  color: #6E7FF3; }
+  color: #84f36e; }
 
 .contact-form {
   padding: 60px 130px 60px 60px;
@@ -842,7 +842,7 @@ ul.social {
     font-size: 1.9em;
     margin-right: 15px; }
     ul.social a:hover {
-      color: #6E7FF3; }
+      color: #84f36e; }
 
 .contact-item {
   display: flex;
@@ -962,9 +962,9 @@ ul.social {
   ul.social a {
     font-size: 1.9em;
     margin-right: 15px;
-    color: #6E7FF3; }
+    color: #84f36e; }
     ul.social a:hover {
-      color: #3D4E81; }
+      color: #45813d; }
 
 .copyright {
   margin: 0;
@@ -994,7 +994,7 @@ ul.social {
   margin: 0; }
   .template-list a {
     display: flex;
-    color: #3D4E81;
+    color: #45813d;
     font-weight: 900;
     text-transform: uppercase;
     font-size: .9em;
@@ -1011,13 +1011,13 @@ ul.template-list li {
   margin-right: 8px; }
 
 .template-dark-clr {
-  background-color: #3D4E81 !important; }
+  background-color: #45813d !important; }
 
 .template-light-clr {
-  background-color: #6E7FF3 !important; }
+  background-color: #84f36e !important; }
 
 .template-blue-clr {
-  background-color: #3455ff !important; }
+  background-color: #3bff34 !important; }
 
 .template-black-clr {
   background-color: #1d1e20 !important; }
@@ -1052,10 +1052,10 @@ ul.template-list li {
   animation: circleBouncing 2s infinite ease-in-out; }
 
 .loader-dots .circle-1 {
-  background-color: #3D4E81; }
+  background-color: #45813d; }
 
 .loader-dots .circle-2 {
-  background-color: #6E7FF3;
+  background-color: #84f36e;
   top: auto;
   bottom: 0;
   -webkit-animation-delay: -1s;

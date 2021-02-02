@@ -1,20 +1,32 @@
+import {useState, useEffect} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
 export default function Home() {
-  return (
+
+   const [styleState,setStyleState] = useState({
+      backgroundColor: "#edcabd"
+   })
+   const [styler, setStyler] = useState(true)
+
+   useEffect(()=> {
+      setTimeout(e => {setStyleState(prev => ({...prev,opacity:"none"})); setStyler(false)}, 800)
+   },[styler])
+
+   return (
     <>
     <div data-spy="scroll" data-target=".navbar" data-offset="82">
     <Head>
       <link rel="stylesheet" href="css/main.css" type="text/css"/>
     </Head>
    
-      <div className="site-loader">
+      {styler ? (<div className="site-loader" style={styleState}>
          <div className="loader-dots">
+            
             <div className="circle circle-1"></div>
             <div className="circle circle-2"></div>
          </div>
-      </div>
+      </div>) : (<div></div>)}
       <nav className="navbar" id="myNavbar">
          <div className="container ">
             <div className="navbar-header ">
