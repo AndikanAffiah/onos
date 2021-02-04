@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function Home() {
 
    const [styleState,setStyleState] = useState({
-      backgroundColor: "#edcabd"
+      backgroundColor: "#fff"
    })
    const [styler, setStyler] = useState(true)
 
@@ -47,7 +47,7 @@ export default function Home() {
                   <li><a href="#faq-section">Faq</a></li>
                   <li><a href="#contact">Contact</a></li>
                   <li>
-                     <Link href="/login">
+                     <Link href="/account">
                         <a className="menu-btn">Signup</a>
                      </Link>
                   </li>

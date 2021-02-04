@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-export default function Signup (){
+export default function Signup (props){
 
     const attemptSignUp = e => {
         e.preventDefault();
@@ -43,31 +43,34 @@ export default function Signup (){
                 <link rel="stylesheet" href="css/login.css" type="text/css"/>
             </Head>
             <div className="d-flex justify-center align-center w-100 h-100 absolute bg-l-blue">
-                <form onSubmit={attemptSignUp} className="p-5 bg-white card">
-                    <div className="d-flex">
-                        <div className="mr-3">
-                            <input className="login-input" placeholder="First Name" name="firstName" type="text"/>
+                <div className="card bg-white w-40-90">
+                    <div className="d-flex justify-between h-50-px pointer">
+                        <div className="d-flex justify-center align-center w-50 br-tl-soft border-bottom-1">Signup</div>
+                        <hr/>
+                        <div onClick={props.setLoginForm(true)} className="d-flex justify-center align-center w-50 br-tr-soft inactive">Login</div>
+                    </div>
+                    <hr/>
+                    <form onSubmit={attemptSignUp} className="p-5 bg-white">
+                        <div className="d-flex">
+                            <div className="mr-3">
+                                <input className="login-input" placeholder="First Name" name="firstName" type="text" required/>
+                            </div>
+                            <div className="ml-3">
+                                <input className="login-input" placeholder="Last Name" name="lastName" type="text" required/>
+                            </div>
                         </div>
-                        <div className="ml-3">
-                            <input className="login-input" placeholder="Last Name" name="lastName" type="text"/>
+                        <div>
+                            <input className="login-input" placeholder="email" name="email" type="email" required/>
                         </div>
-                    </div>
-                    <div>
-                        <input className="login-input" placeholder="email" name="email" type="email"/>
-                    </div>
-                    <div>
-                        <input className="login-input" placeholder="password" name="password" type="password"/>
-                    </div>
-                    <div className="pt-3"><input type="checkbox" name="terms" />Accept terms and conditions.</div>
-                    <div className="d-flex justify-center">
-                        <button className="login-input bg-blue text-white w-50" type="submit">Sign Up</button>
-                    </div>
-                    <div className="d-flex justify-end">
-                        <Link href="/login">
-                            <a className="menu-btn">Login instead</a>
-                        </Link>
-                    </div>
-                </form>
+                        <div>
+                            <input className="login-input" placeholder="password" name="password" type="password" required/>
+                        </div>
+                        <div className="pt-3"><input type="checkbox" name="terms" required/>Accept terms and conditions.</div>
+                        <div className="d-flex justify-center">
+                            <button className="login-input bg-blue text-white w-50" type="submit">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
       );

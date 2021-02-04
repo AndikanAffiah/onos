@@ -46,22 +46,24 @@ export default function Login (props){
                 <link rel="stylesheet" href="css/login.css" type="text/css"/>
             </Head>
             <div className="d-flex justify-center align-center w-100 h-100 absolute bg-l-blue">
-            <form onSubmit={attemptLogin} className="p-5 bg-white w-50 card" >
-                <div>
-                <input className="login-input" name="email" placeholder="email" type="email"/>
+              <div className="card bg-white w-40-90">
+                <div className="d-flex justify-between h-50-px pointer">
+                    <div onClick={props.setLoginForm(false)} className="d-flex justify-center align-center w-50 br-tl-soft inactive">Signup</div>
+                    <hr/>
+                    <div className="d-flex justify-center align-center w-50 br-tr-soft">Login</div>
                 </div>
-                <div>
-                <input className="login-input" name="password" placeholder="password" type="password"/>
-                </div>
-                <div className="d-flex justify-center">
-                <button className="login-input bg-blue text-white w-50" type="submit">Login</button>
-                </div>
-                <div className="d-flex justify-end pt-3">
-                    <Link href="/signup">
-                        <a className="menu-btn">SignUp instead</a>
-                     </Link>
-                </div>
-            </form>
+                <form onSubmit={attemptLogin} className="p-5 bg-white">
+                    <div>
+                    <input className="login-input" name="email" placeholder="email" type="email" required/>
+                    </div>
+                    <div>
+                    <input className="login-input" name="password" placeholder="password" type="password" required/>
+                    </div>
+                    <div className="d-flex justify-center">
+                    <button className="login-input bg-blue text-white w-50" type="submit">Login</button>
+                    </div>
+                </form>
+              </div>
             </div>
         </div>
       );

@@ -552,7 +552,7 @@ div.timer {
       height: 90px;
       position: absolute;
       top: 0;
-      background-color: #f0f8ff;
+      background-color: #e6ffe6;
       z-index: -1;
       border-radius: 0 0 50px 50px;
       left: 0;
@@ -1447,6 +1447,6 @@ ul.template-list li {
 
 
 .logo{
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
 }
