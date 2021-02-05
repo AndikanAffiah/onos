@@ -6,19 +6,792 @@ export default function Dashboard(props) {
         <div>
             <Head>
                 <link rel="stylesheet" href="css/style.css" type="text/css" />
+                <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png" />
+                <link href="vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet" />
+                <link rel="stylesheet" href="vendor/chartist/css/chartist.min.css" />
+                <link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+                <link href="css/style.css" rel="stylesheet" />
+                <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
+                <link href="vendor/owl-carousel/owl.carousel.css" rel="stylesheet" />
             </Head>
 
-            <div id="main-wrapper relative">
+            <div id="main-wrapper">
+
+
                 <div className="nav-header">
-                    <span href="index.html" className="brand-logo">
-                        <img className="logo-abbr" src="images/ezo.png" alt="" />
-                    </span>
+                    <a href="#" className="brand-logo">
+                        <img className="logo-abbr" src="./images/ezo.png" alt="" />
+                    </a>
+
                     <div className="nav-control">
                         <div className="hamburger">
                             <span className="line"></span><span className="line"></span><span className="line"></span>
                         </div>
                     </div>
                 </div>
+
+
+
+                <div className="chatbox">
+                    <div className="chatbox-close"></div>
+                    <div className="custom-tab-1">
+                        <ul className="nav nav-tabs">
+                            <li className="nav-item">
+                                <a className="nav-link" data-toggle="tab" href="#notes">Notes</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" data-toggle="tab" href="#alerts">Alerts</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link active" data-toggle="tab" href="#chat">Chat</a>
+                            </li>
+                        </ul>
+                        <div className="tab-content">
+                            <div className="tab-pane fade active show" id="chat" role="tabpanel">
+                                <div className="card mb-sm-3 mb-md-0 contacts_card dz-chat-user-box">
+                                    <div className="card-header chat-list-header text-center">
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd"><rect fill="#000000" x="4" y="11" width="16" height="2" rx="1" /><rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1" /></g></svg></a>
+                                        <div>
+                                            <h6 className="mb-1">Chat List</h6>
+                                            <p className="mb-0">Show All</p>
+                                        </div>
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd"><rect x="0" y="0" width="24" height="24" /><circle fill="#000000" cx="5" cy="12" r="2" /><circle fill="#000000" cx="12" cy="12" r="2" /><circle fill="#000000" cx="19" cy="12" r="2" /></g></svg></a>
+                                    </div>
+                                    <div className="card-body contacts_body p-0 dz-scroll  " id="DZ_W_Contacts_Body">
+                                        <ul className="contacts">
+                                            <li className="name-first-letter">A</li>
+                                            <li className="active dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/1.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>Archie Parker</span>
+                                                        <p>Kalid is online</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/2.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon offline"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>Alfie Mason</span>
+                                                        <p>Taherah left 7 mins ago</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/3.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>AharlieKane</span>
+                                                        <p>Sami is online</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/4.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon offline"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>Athan Jacoby</span>
+                                                        <p>Nargis left 30 mins ago</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="name-first-letter">B</li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/5.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon offline"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>Bashid Samim</span>
+                                                        <p>Rashid left 50 mins ago</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/1.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>Breddie Ronan</span>
+                                                        <p>Kalid is online</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/2.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon offline"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>Ceorge Carson</span>
+                                                        <p>Taherah left 7 mins ago</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="name-first-letter">D</li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/3.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>Darry Parker</span>
+                                                        <p>Sami is online</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/4.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon offline"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>Denry Hunter</span>
+                                                        <p>Nargis left 30 mins ago</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="name-first-letter">J</li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/5.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon offline"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>Jack Ronan</span>
+                                                        <p>Rashid left 50 mins ago</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/1.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>Jacob Tucker</span>
+                                                        <p>Kalid is online</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/2.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon offline"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>James Logan</span>
+                                                        <p>Taherah left 7 mins ago</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/3.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>Joshua Weston</span>
+                                                        <p>Sami is online</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="name-first-letter">O</li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/4.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon offline"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>Oliver Acker</span>
+                                                        <p>Nargis left 30 mins ago</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="dz-chat-user">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont">
+                                                        <img src="images/avatar/5.jpg" className="rounded-circle user_img" alt="" />
+                                                        <span className="online_icon offline"></span>
+                                                    </div>
+                                                    <div className="user_info">
+                                                        <span>Oscar Weston</span>
+                                                        <p>Rashid left 50 mins ago</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="card chat dz-chat-history-box d-none">
+                                    <div className="card-header chat-list-header text-center">
+                                        <a href="#" className="dz-chat-history-back">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd"><polygon points="0 0 24 0 24 24 0 24" /><rect fill="#000000" opacity="0.3" transform="translate(15.000000, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-15.000000, -12.000000) " x="14" y="7" width="2" height="10" rx="1" /><path d="M3.7071045,15.7071045 C3.3165802,16.0976288 2.68341522,16.0976288 2.29289093,15.7071045 C1.90236664,15.3165802 1.90236664,14.6834152 2.29289093,14.2928909 L8.29289093,8.29289093 C8.67146987,7.914312 9.28105631,7.90106637 9.67572234,8.26284357 L15.6757223,13.7628436 C16.0828413,14.136036 16.1103443,14.7686034 15.7371519,15.1757223 C15.3639594,15.5828413 14.7313921,15.6103443 14.3242731,15.2371519 L9.03007346,10.3841355 L3.7071045,15.7071045 Z" fill="#000000" fillRule="nonzero" transform="translate(9.000001, 11.999997) scale(-1, -1) rotate(90.000000) translate(-9.000001, -11.999997) " /></g></svg>
+                                        </a>
+                                        <div>
+                                            <h6 className="mb-1">Chat with Khelesh</h6>
+                                            <p className="mb-0 text-success">Online</p>
+                                        </div>
+                                        <div className="dropdown">
+                                            <a href="#" data-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd"><rect x="0" y="0" width="24" height="24" /><circle fill="#000000" cx="5" cy="12" r="2" /><circle fill="#000000" cx="12" cy="12" r="2" /><circle fill="#000000" cx="19" cy="12" r="2" /></g></svg></a>
+                                            <ul className="dropdown-menu dropdown-menu-right">
+                                                <li className="dropdown-item"><i className="fa fa-user-circle text-primary mr-2"></i> View profile</li>
+                                                <li className="dropdown-item"><i className="fa fa-users text-primary mr-2"></i> Add to close friends</li>
+                                                <li className="dropdown-item"><i className="fa fa-plus text-primary mr-2"></i> Add to group</li>
+                                                <li className="dropdown-item"><i className="fa fa-ban text-primary mr-2"></i> Block</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="card-body msg_card_body dz-scroll" id="DZ_W_Contacts_Body3">
+                                        <div className="d-flex justify-content-start mb-4">
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/1.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                            <div className="msg_cotainer">
+                                                Hi, how are you samim?
+										<span className="msg_time">8:40 AM, Today</span>
+                                            </div>
+                                        </div>
+                                        <div className="d-flex justify-content-end mb-4">
+                                            <div className="msg_cotainer_send">
+                                                Hi Khalid i am good tnx how about you?
+										<span className="msg_time_send">8:55 AM, Today</span>
+                                            </div>
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/2.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div className="d-flex justify-content-start mb-4">
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/1.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                            <div className="msg_cotainer">
+                                                I am good too, thank you for your chat template
+										<span className="msg_time">9:00 AM, Today</span>
+                                            </div>
+                                        </div>
+                                        <div className="d-flex justify-content-end mb-4">
+                                            <div className="msg_cotainer_send">
+                                                You are welcome
+										<span className="msg_time_send">9:05 AM, Today</span>
+                                            </div>
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/2.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div className="d-flex justify-content-start mb-4">
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/1.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                            <div className="msg_cotainer">
+                                                I am looking for your next templates
+										<span className="msg_time">9:07 AM, Today</span>
+                                            </div>
+                                        </div>
+                                        <div className="d-flex justify-content-end mb-4">
+                                            <div className="msg_cotainer_send">
+                                                Ok, thank you have a good day
+										<span className="msg_time_send">9:10 AM, Today</span>
+                                            </div>
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/2.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div className="d-flex justify-content-start mb-4">
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/1.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                            <div className="msg_cotainer">
+                                                Bye, see you
+										<span className="msg_time">9:12 AM, Today</span>
+                                            </div>
+                                        </div>
+                                        <div className="d-flex justify-content-start mb-4">
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/1.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                            <div className="msg_cotainer">
+                                                Hi, how are you samim?
+										<span className="msg_time">8:40 AM, Today</span>
+                                            </div>
+                                        </div>
+                                        <div className="d-flex justify-content-end mb-4">
+                                            <div className="msg_cotainer_send">
+                                                Hi Khalid i am good tnx how about you?
+										<span className="msg_time_send">8:55 AM, Today</span>
+                                            </div>
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/2.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div className="d-flex justify-content-start mb-4">
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/1.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                            <div className="msg_cotainer">
+                                                I am good too, thank you for your chat template
+										<span className="msg_time">9:00 AM, Today</span>
+                                            </div>
+                                        </div>
+                                        <div className="d-flex justify-content-end mb-4">
+                                            <div className="msg_cotainer_send">
+                                                You are welcome
+										<span className="msg_time_send">9:05 AM, Today</span>
+                                            </div>
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/2.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div className="d-flex justify-content-start mb-4">
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/1.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                            <div className="msg_cotainer">
+                                                I am looking for your next templates
+										<span className="msg_time">9:07 AM, Today</span>
+                                            </div>
+                                        </div>
+                                        <div className="d-flex justify-content-end mb-4">
+                                            <div className="msg_cotainer_send">
+                                                Ok, thank you have a good day
+										<span className="msg_time_send">9:10 AM, Today</span>
+                                            </div>
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/2.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div className="d-flex justify-content-start mb-4">
+                                            <div className="img_cont_msg">
+                                                <img src="images/avatar/1.jpg" className="rounded-circle user_img_msg" alt="" />
+                                            </div>
+                                            <div className="msg_cotainer">
+                                                Bye, see you
+										<span className="msg_time">9:12 AM, Today</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="card-footer type_msg">
+                                        <div className="input-group">
+                                            <textarea className="form-control" placeholder="Type your message..."></textarea>
+                                            <div className="input-group-append">
+                                                <button type="button" className="btn btn-primary"><i className="fa fa-location-arrow"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="tab-pane fade" id="alerts" role="tabpanel">
+                                <div className="card mb-sm-3 mb-md-0 contacts_card">
+                                    <div className="card-header chat-list-header text-center">
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd"><rect x="0" y="0" width="24" height="24" /><circle fill="#000000" cx="5" cy="12" r="2" /><circle fill="#000000" cx="12" cy="12" r="2" /><circle fill="#000000" cx="19" cy="12" r="2" /></g></svg></a>
+                                        <div>
+                                            <h6 className="mb-1">Notications</h6>
+                                            <p className="mb-0">Show All</p>
+                                        </div>
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd"><rect x="0" y="0" width="24" height="24" /><path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fillRule="nonzero" opacity="0.3" /><path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fillRule="nonzero" /></g></svg></a>
+                                    </div>
+                                    <div className="card-body contacts_body p-0 dz-scroll" id="DZ_W_Contacts_Body1">
+                                        <ul className="contacts">
+                                            <li className="name-first-letter">SEVER STATUS</li>
+                                            <li className="active">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont primary">KK</div>
+                                                    <div className="user_info">
+                                                        <span>David Nester Birthday</span>
+                                                        <p className="text-primary">Today</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="name-first-letter">SOCIAL</li>
+                                            <li>
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont success">RU<i className="icon fa-birthday-cake"></i></div>
+                                                    <div className="user_info">
+                                                        <span>Perfection Simplified</span>
+                                                        <p>Jame Smith commented on your status</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li className="name-first-letter">SEVER STATUS</li>
+                                            <li>
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont primary">AU<i className="icon fa fa-user-plus"></i></div>
+                                                    <div className="user_info">
+                                                        <span>AharlieKane</span>
+                                                        <p>Sami is online</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="img_cont info">MO<i className="icon fa fa-user-plus"></i></div>
+                                                    <div className="user_info">
+                                                        <span>Athan Jacoby</span>
+                                                        <p>Nargis left 30 mins ago</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="card-footer"></div>
+                                </div>
+                            </div>
+                            <div className="tab-pane fade" id="notes">
+                                <div className="card mb-sm-3 mb-md-0 note_card">
+                                    <div className="card-header chat-list-header text-center">
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd"><rect fill="#000000" x="4" y="11" width="16" height="2" rx="1" /><rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1" /></g></svg></a>
+                                        <div>
+                                            <h6 className="mb-1">Notes</h6>
+                                            <p className="mb-0">Add New Nots</p>
+                                        </div>
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd"><rect x="0" y="0" width="24" height="24" /><path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fillRule="nonzero" opacity="0.3" /><path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fillRule="nonzero" /></g></svg></a>
+                                    </div>
+                                    <div className="card-body contacts_body p-0 dz-scroll" id="DZ_W_Contacts_Body2">
+                                        <ul className="contacts">
+                                            <li className="active">
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="user_info">
+                                                        <span>New order placed..</span>
+                                                        <p>10 Aug 2020</p>
+                                                    </div>
+                                                    <div className="ml-auto">
+                                                        <a href="#" className="btn btn-primary btn-xs sharp mr-1"><i className="fa fa-pencil"></i></a>
+                                                        <a href="#" className="btn btn-danger btn-xs sharp"><i className="fa fa-trash"></i></a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="user_info">
+                                                        <span>Youtube, a video-sharing website..</span>
+                                                        <p>10 Aug 2020</p>
+                                                    </div>
+                                                    <div className="ml-auto">
+                                                        <a href="#" className="btn btn-primary btn-xs sharp mr-1"><i className="fa fa-pencil"></i></a>
+                                                        <a href="#" className="btn btn-danger btn-xs sharp"><i className="fa fa-trash"></i></a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="user_info">
+                                                        <span>john just buy your product..</span>
+                                                        <p>10 Aug 2020</p>
+                                                    </div>
+                                                    <div className="ml-auto">
+                                                        <a href="#" className="btn btn-primary btn-xs sharp mr-1"><i className="fa fa-pencil"></i></a>
+                                                        <a href="#" className="btn btn-danger btn-xs sharp"><i className="fa fa-trash"></i></a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="d-flex bd-highlight">
+                                                    <div className="user_info">
+                                                        <span>Athan Jacoby</span>
+                                                        <p>10 Aug 2020</p>
+                                                    </div>
+                                                    <div className="ml-auto">
+                                                        <a href="#" className="btn btn-primary btn-xs sharp mr-1"><i className="fa fa-pencil"></i></a>
+                                                        <a href="#" className="btn btn-danger btn-xs sharp"><i className="fa fa-trash"></i></a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div className="header">
+                    <div className="header-content">
+                        <nav className="navbar navbar-expand">
+                            <div className="collapse navbar-collapse justify-content-between">
+                                <div className="header-left">
+                                    <div className="dashboard_bar">
+                                        Dashboard
+                            </div>
+                                </div>
+
+                                <ul className="navbar-nav header-right">
+                                    <li className="nav-item dropdown notification_dropdown">
+                                        <a className="nav-link  ai-icon" href="#" role="button" data-toggle="dropdown">
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21.75 14.8385V12.0463C21.7471 9.88552 20.9385 7.80353 19.4821 6.20735C18.0258 4.61116 16.0264 3.61555 13.875 3.41516V1.625C13.875 1.39294 13.7828 1.17038 13.6187 1.00628C13.4546 0.842187 13.2321 0.75 13 0.75C12.7679 0.75 12.5454 0.842187 12.3813 1.00628C12.2172 1.17038 12.125 1.39294 12.125 1.625V3.41534C9.97361 3.61572 7.97429 4.61131 6.51794 6.20746C5.06159 7.80361 4.25291 9.88555 4.25 12.0463V14.8383C3.26257 15.0412 2.37529 15.5784 1.73774 16.3593C1.10019 17.1401 0.751339 18.1169 0.75 19.125C0.750764 19.821 1.02757 20.4882 1.51969 20.9803C2.01181 21.4724 2.67904 21.7492 3.375 21.75H8.71346C8.91521 22.738 9.45205 23.6259 10.2331 24.2636C11.0142 24.9013 11.9916 25.2497 13 25.2497C14.0084 25.2497 14.9858 24.9013 15.7669 24.2636C16.548 23.6259 17.0848 22.738 17.2865 21.75H22.625C23.321 21.7492 23.9882 21.4724 24.4803 20.9803C24.9724 20.4882 25.2492 19.821 25.25 19.125C25.2486 18.117 24.8998 17.1402 24.2622 16.3594C23.6247 15.5786 22.7374 15.0414 21.75 14.8385ZM6 12.0463C6.00232 10.2113 6.73226 8.45223 8.02974 7.15474C9.32723 5.85726 11.0863 5.12732 12.9212 5.125H13.0788C14.9137 5.12732 16.6728 5.85726 17.9703 7.15474C19.2677 8.45223 19.9977 10.2113 20 12.0463V14.75H6V12.0463ZM13 23.5C12.4589 23.4983 11.9316 23.3292 11.4905 23.0159C11.0493 22.7026 10.716 22.2604 10.5363 21.75H15.4637C15.284 22.2604 14.9507 22.7026 14.5095 23.0159C14.0684 23.3292 13.5411 23.4983 13 23.5ZM22.625 20H3.375C3.14298 19.9999 2.9205 19.9076 2.75644 19.7436C2.59237 19.5795 2.50014 19.357 2.5 19.125C2.50076 18.429 2.77757 17.7618 3.26969 17.2697C3.76181 16.7776 4.42904 16.5008 5.125 16.5H20.875C21.571 16.5008 22.2382 16.7776 22.7303 17.2697C23.2224 17.7618 23.4992 18.429 23.5 19.125C23.4999 19.357 23.4076 19.5795 23.2436 19.7436C23.0795 19.9076 22.857 19.9999 22.625 20Z" fill="#6418C3" />
+                                            </svg>
+                                            <span className="badge light text-white bg-primary">12</span>
+                                        </a>
+                                        <div className="dropdown-menu dropdown-menu-right">
+                                            <div id="DZ_W_Notification1" className="widget-media dz-scroll p-3 height380">
+                                                <ul className="timeline">
+                                                    <li>
+                                                        <div className="timeline-panel">
+                                                            <div className="media mr-2">
+                                                                <img alt="image" width="50" src="images/avatar/1.jpg" />
+                                                            </div>
+                                                            <div className="media-body">
+                                                                <h6 className="mb-1">Dr sultads Send you Photo</h6>
+                                                                <small className="d-block">29 July 2020 - 02:26 PM</small>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className="timeline-panel">
+                                                            <div className="media mr-2 media-info">
+                                                                KG
+													</div>
+                                                            <div className="media-body">
+                                                                <h6 className="mb-1">Resport created successfully</h6>
+                                                                <small className="d-block">29 July 2020 - 02:26 PM</small>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className="timeline-panel">
+                                                            <div className="media mr-2 media-success">
+                                                                <i className="fa fa-home"></i>
+                                                            </div>
+                                                            <div className="media-body">
+                                                                <h6 className="mb-1">Reminder : Treatment Time!</h6>
+                                                                <small className="d-block">29 July 2020 - 02:26 PM</small>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className="timeline-panel">
+                                                            <div className="media mr-2">
+                                                                <img alt="image" width="50" src="images/avatar/1.jpg" />
+                                                            </div>
+                                                            <div className="media-body">
+                                                                <h6 className="mb-1">Dr sultads Send you Photo</h6>
+                                                                <small className="d-block">29 July 2020 - 02:26 PM</small>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className="timeline-panel">
+                                                            <div className="media mr-2 media-danger">
+                                                                KG
+													</div>
+                                                            <div className="media-body">
+                                                                <h6 className="mb-1">Resport created successfully</h6>
+                                                                <small className="d-block">29 July 2020 - 02:26 PM</small>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className="timeline-panel">
+                                                            <div className="media mr-2 media-primary">
+                                                                <i className="fa fa-home"></i>
+                                                            </div>
+                                                            <div className="media-body">
+                                                                <h6 className="mb-1">Reminder : Treatment Time!</h6>
+                                                                <small className="d-block">29 July 2020 - 02:26 PM</small>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a className="all-notification" href="#">See all notifications <i className="ti-arrow-right"></i></a>
+                                        </div>
+                                    </li>
+                                    <li className="nav-item dropdown notification_dropdown">
+                                        <a className="nav-link bell bell-link" href="#">
+                                            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M20.4604 0.848877H3.31682C2.64742 0.849612 2.00565 1.11586 1.53231 1.58919C1.05897 2.06253 0.792727 2.7043 0.791992 3.3737V15.1562C0.792727 15.8256 1.05897 16.4674 1.53231 16.9407C2.00565 17.4141 2.64742 17.6803 3.31682 17.6811C3.53999 17.6812 3.75398 17.7699 3.91178 17.9277C4.06958 18.0855 4.15829 18.2995 4.15843 18.5227V20.3168C4.15843 20.6215 4.24112 20.9204 4.39768 21.1818C4.55423 21.4431 4.77879 21.6571 5.04741 21.8009C5.31602 21.9446 5.61861 22.0128 5.92292 21.9981C6.22723 21.9834 6.52183 21.8863 6.77533 21.7173L12.6173 17.8224C12.7554 17.7299 12.9179 17.6807 13.0841 17.6811H17.187C17.7383 17.68 18.2742 17.4994 18.7136 17.1664C19.1531 16.8335 19.472 16.3664 19.6222 15.8359L22.8965 4.05011C22.9998 3.67481 23.0152 3.28074 22.9413 2.89856C22.8674 2.51637 22.7064 2.15639 22.4707 1.84663C22.2349 1.53687 21.9309 1.28568 21.5822 1.11263C21.2336 0.939571 20.8497 0.849312 20.4604 0.848877ZM21.2732 3.60304L18.0005 15.3847C17.9499 15.5614 17.8432 15.7168 17.6964 15.8275C17.5496 15.9381 17.3708 15.9979 17.187 15.9978H13.0841C12.5855 15.9972 12.098 16.1448 11.6836 16.4219L5.84165 20.3168V18.5227C5.84091 17.8533 5.57467 17.2115 5.10133 16.7382C4.62799 16.2648 3.98622 15.9986 3.31682 15.9978C3.09365 15.9977 2.87966 15.909 2.72186 15.7512C2.56406 15.5934 2.47534 15.3794 2.47521 15.1562V3.3737C2.47534 3.15054 2.56406 2.93655 2.72186 2.77874C2.87966 2.62094 3.09365 2.53223 3.31682 2.5321H20.4604C20.5905 2.53243 20.7187 2.56277 20.8352 2.62076C20.9516 2.67875 21.0531 2.76283 21.1318 2.86646C21.2104 2.97008 21.2641 3.09045 21.2886 3.21821C21.3132 3.34597 21.3079 3.47766 21.2732 3.60304Z" fill="#6418C3" />
+                                                <path d="M5.84161 8.42333H10.0497C10.2729 8.42333 10.4869 8.33466 10.6448 8.17683C10.8026 8.019 10.8913 7.80493 10.8913 7.58172C10.8913 7.35851 10.8026 7.14445 10.6448 6.98661C10.4869 6.82878 10.2729 6.74011 10.0497 6.74011H5.84161C5.6184 6.74011 5.40433 6.82878 5.2465 6.98661C5.08867 7.14445 5 7.35851 5 7.58172C5 7.80493 5.08867 8.019 5.2465 8.17683C5.40433 8.33466 5.6184 8.42333 5.84161 8.42333Z" fill="#6418C3" />
+                                                <path d="M13.4161 10.1066H5.84161C5.6184 10.1066 5.40433 10.1952 5.2465 10.3531C5.08867 10.5109 5 10.725 5 10.9482C5 11.1714 5.08867 11.3855 5.2465 11.5433C5.40433 11.7011 5.6184 11.7898 5.84161 11.7898H13.4161C13.6393 11.7898 13.8534 11.7011 14.0112 11.5433C14.169 11.3855 14.2577 11.1714 14.2577 10.9482C14.2577 10.725 14.169 10.5109 14.0112 10.3531C13.8534 10.1952 13.6393 10.1066 13.4161 10.1066Z" fill="#6418C3" />
+                                            </svg>
+                                            <span className="badge light text-white bg-primary">5</span>
+                                        </a>
+                                    </li>
+                                    <li className="nav-item dropdown notification_dropdown">
+                                        <a className="nav-link" href="#" data-toggle="dropdown">
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22.625 5.12506H21.75V1.62506C21.75 1.47268 21.7102 1.32295 21.6345 1.19068C21.5589 1.05841 21.45 0.948189 21.3186 0.870929C21.1873 0.79367 21.0381 0.75205 20.8857 0.750187C20.7333 0.748325 20.5831 0.786285 20.4499 0.860311L13 4.99915L5.55007 0.860311C5.41688 0.786285 5.26667 0.748325 5.11431 0.750187C4.96194 0.75205 4.8127 0.79367 4.68136 0.870929C4.55002 0.948189 4.44113 1.05841 4.36547 1.19068C4.28981 1.32295 4.25001 1.47268 4.25 1.62506V5.12506H3.375C2.67904 5.12582 2.01181 5.40263 1.51969 5.89475C1.02757 6.38687 0.750764 7.0541 0.75 7.75006V10.3751C0.750764 11.071 1.02757 11.7383 1.51969 12.2304C2.01181 12.7225 2.67904 12.9993 3.375 13.0001H4.25V22.6251C4.25076 23.321 4.52757 23.9882 5.01969 24.4804C5.51181 24.9725 6.17904 25.2493 6.875 25.2501H19.125C19.821 25.2493 20.4882 24.9725 20.9803 24.4804C21.4724 23.9882 21.7492 23.321 21.75 22.6251V13.0001H22.625C23.321 12.9993 23.9882 12.7225 24.4803 12.2304C24.9724 11.7383 25.2492 11.071 25.25 10.3751V7.75006C25.2492 7.0541 24.9724 6.38687 24.4803 5.89475C23.9882 5.40263 23.321 5.12582 22.625 5.12506ZM20 5.12506H16.3769L20 3.11256V5.12506ZM6 3.11256L9.62311 5.12506H6V3.11256ZM6 22.6251V13.0001H12.125V23.5001H6.875C6.64303 23.4998 6.42064 23.4075 6.25661 23.2434C6.09258 23.0794 6.0003 22.857 6 22.6251ZM20 22.6251C19.9997 22.857 19.9074 23.0794 19.7434 23.2434C19.5794 23.4075 19.357 23.4998 19.125 23.5001H13.875V13.0001H20V22.6251ZM23.5 10.3751C23.4997 10.607 23.4074 10.8294 23.2434 10.9934C23.0794 11.1575 22.857 11.2498 22.625 11.2501H3.375C3.14303 11.2498 2.92064 11.1575 2.75661 10.9934C2.59258 10.8294 2.5003 10.607 2.5 10.3751V7.75006C2.5003 7.51809 2.59258 7.2957 2.75661 7.13167C2.92064 6.96764 3.14303 6.87536 3.375 6.87506H22.625C22.857 6.87536 23.0794 6.96764 23.2434 7.13167C23.4074 7.2957 23.4997 7.51809 23.5 7.75006V10.3751Z" fill="#3E4954" />
+                                            </svg>
+                                            <span className="badge light text-white bg-primary">2</span>
+                                        </a>
+                                        <div className="dropdown-menu dropdown-menu-right">
+                                            <div id="DZ_W_TimeLine02" className="widget-timeline dz-scroll style-1 ps ps--active-y p-3 height370">
+                                                <ul className="timeline">
+                                                    <li>
+                                                        <div className="timeline-badge primary"></div>
+                                                        <a className="timeline-panel text-muted" href="#">
+                                                            <span>10 minutes ago</span>
+                                                            <h6 className="mb-0">Youtube, a video-sharing website, goes live <strong className="text-primary">$500</strong>.</h6>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <div className="timeline-badge info">
+                                                        </div>
+                                                        <a className="timeline-panel text-muted" href="#">
+                                                            <span>20 minutes ago</span>
+                                                            <h6 className="mb-0">New order placed <strong className="text-info">#XF-2356.</strong></h6>
+                                                            <p className="mb-0">Quisque a consequat ante Sit amet magna at volutapt...</p>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <div className="timeline-badge danger">
+                                                        </div>
+                                                        <a className="timeline-panel text-muted" href="#">
+                                                            <span>30 minutes ago</span>
+                                                            <h6 className="mb-0">john just buy your product <strong className="text-warning">Sell $250</strong></h6>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <div className="timeline-badge success">
+                                                        </div>
+                                                        <a className="timeline-panel text-muted" href="#">
+                                                            <span>15 minutes ago</span>
+                                                            <h6 className="mb-0">StumbleUpon is acquired by eBay. </h6>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <div className="timeline-badge warning">
+                                                        </div>
+                                                        <a className="timeline-panel text-muted" href="#">
+                                                            <span>20 minutes ago</span>
+                                                            <h6 className="mb-0">Mashable, a news website and blog, goes live.</h6>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <div className="timeline-badge dark">
+                                                        </div>
+                                                        <a className="timeline-panel text-muted" href="#">
+                                                            <span>20 minutes ago</span>
+                                                            <h6 className="mb-0">Mashable, a news website and blog, goes live.</h6>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li className="nav-item dropdown header-profile">
+                                        <a className="nav-link" href="#" role="button" data-toggle="dropdown">
+                                            <div className="header-info">
+                                                <span className="text-black">Hello, <strong>Thomas</strong></span>
+                                                <p className="fs-12 mb-0">Super Admin</p>
+                                            </div>
+                                            <img src="images/profile/pic1.jpg" width="20" alt="" />
+                                        </a>
+                                        <div className="dropdown-menu dropdown-menu-right">
+                                            <a href="#" className="dropdown-item ai-icon">
+                                                <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" className="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                <span className="ml-2">Profile </span>
+                                            </a>
+                                            <a href="#" className="dropdown-item ai-icon">
+                                                <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" className="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                                <span className="ml-2">Inbox </span>
+                                            </a>
+                                            <a href="#" className="dropdown-item ai-icon">
+                                                <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" className="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                                <span className="ml-2">Logout </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div className="deznav">
+                    <div className="deznav-scroll">
+                        <ul className="metismenu" id="menu">
+                            <li><a className="has-arrow ai-icon" href="#" aria-expanded="false">
+                                <i className="flaticon-381-networking"></i>
+                                <span className="nav-text">Dashboard</span>
+                            </a>
+                                {/* <ul aria-expanded="false">
+                                    <li><a href="#">Dashboard</a></li>
+                                    <li><a href="#">My Wallet</a></li>
+                                    <li><a href="#">Coin Details</a></li>
+                                    <li><a href="#">Portfolio</a></li>
+                                    <li><a href="#">Transactions</a></li>
+                                    <li><a href="#">Market Capital</a></li>
+                                </ul> */}
+                            </li>
+                            <li><a className="has-arrow ai-icon" href="#" aria-expanded="false">
+                                <i className="flaticon-381-television"></i>
+                                <span className="nav-text">Apps</span>
+                            </a>
+                            </li>
+                            <li><a className="has-arrow ai-icon" href="#" aria-expanded="false">
+                                <i className="flaticon-381-controls-3"></i>
+                                <span className="nav-text">Charts</span>
+                            </a>
+                            </li>
+                            <li><a className="has-arrow ai-icon" href="#" aria-expanded="false">
+                                <i className="flaticon-381-internet"></i>
+                                <span className="nav-text">Bootstrap</span>
+                            </a>
+                            </li>
+                            <li><a className="has-arrow ai-icon" href="#" aria-expanded="false">
+                                <i className="flaticon-381-heart"></i>
+                                <span className="nav-text">Plugins</span>
+                            </a>
+                            </li>
+                            <li><a href="#" className="ai-icon" aria-expanded="false">
+                                <i className="flaticon-381-settings-2"></i>
+                                <span className="nav-text">Widget</span>
+                            </a>
+                            </li>
+                            <li><a className="has-arrow ai-icon" href="#" aria-expanded="false">
+                                <i className="flaticon-381-notepad"></i>
+                                <span className="nav-text">Forms</span>
+                            </a>
+                            </li>
+                            <li><a className="has-arrow ai-icon" href="#" aria-expanded="false">
+                                <i className="flaticon-381-network"></i>
+                                <span className="nav-text">Table</span>
+                            </a>
+                            </li>
+                            <li><a className="has-arrow ai-icon" href="#" aria-expanded="false">
+                                <i className="flaticon-381-layer-1"></i>
+                                <span className="nav-text">Pages</span>
+                            </a>
+                            </li>
+                        </ul>
+
+                        <div className="add-menu-sidebar">
+                            <p>Generate Monthly Credit Report</p>
+                            <a href="#">
+                                <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.725 5.14889C23.7248 5.14861 23.7245 5.14828 23.7242 5.148L18.8256 0.272997C18.4586 -0.0922062 17.865 -0.0908471 17.4997 0.276184C17.1345 0.643169 17.1359 1.23675 17.5028 1.602L20.7918 4.875H0.9375C0.419719 4.875 0 5.29472 0 5.8125C0 6.33028 0.419719 6.75 0.9375 6.75H20.7917L17.5029 10.023C17.1359 10.3882 17.1345 10.9818 17.4998 11.3488C17.865 11.7159 18.4587 11.7172 18.8256 11.352L23.7242 6.477C23.7245 6.47672 23.7248 6.47639 23.7251 6.47611C24.0923 6.10964 24.0911 5.51414 23.725 5.14889Z" fill="white" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
 
                 <div className="content-body">
                     <div className="container-fluid">
@@ -29,7 +802,7 @@ export default function Dashboard(props) {
                                 </div>
                                 <input type="text" className="form-control" placeholder="Search here" />
                             </div>
-                            <span href="#" className="btn btn-primary ml-auto">+ Add New Cyrpto</span>
+                            <a href="#" className="btn btn-primary ml-auto">+ Add New Cyrpto</a>
                         </div>
                         <div className="row">
                             <div className="col-xl-3 col-xxl-6 col-lg-6 col-sm-6">
@@ -132,103 +905,6 @@ export default function Dashboard(props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-6 col-xxl-12 col-lg-12">
-                                <div className="card">
-                                    <div className="card-header d-sm-flex d-block pb-0 border-0">
-                                        <div>
-                                            <h4 className="text-black fs-20">Market Overview</h4>
-                                            <p className="fs-13 mb-0">Lorem ipsum dolor sit amet, consectetur</p>
-                                        </div>
-                                        <div className="dropdown mt-sm-0 mt-3">
-                                            <button type="button" className="btn rounded-0 text-black bgl-light dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                                Monthly (2020)
-                        </button>
-                                            <div className="dropdown-menu dropdown-menu-right">
-                                                <span className="dropdown-item" href="#">Link 1</span>
-                                                <span className="dropdown-item" href="#">Link 2</span>
-                                                <span className="dropdown-item" href="#">Link 3</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card-body" id="user-activity">
-                                        <div className="d-flex flex-wrap justify-content-between mb-5">
-                                            <div className="card-action card-tabs icontabs mt-3 mt-sm-0">
-                                                <ul className="nav nav-tabs" role="tablist">
-                                                    <li className="nav-item">
-                                                        <span className="nav-link active" data-toggle="tab" href="#user" role="tab" aria-selected="true">
-                                                            ALL
-                                    </span>
-                                                    </li>
-                                                    <li className="nav-item">
-                                                        <span className="nav-link" data-toggle="tab" href="#bounce" role="tab" aria-selected="false">
-                                                            <i className="fa fa-btc" aria-hidden="true"></i>
-                                                        </span>
-                                                    </li>
-                                                    <li className="nav-item">
-                                                        <span className="nav-link" data-toggle="tab" href="#session-duration" role="tab" aria-selected="false">
-                                                            <i className="lab la-ethereum"></i>
-                                                        </span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div className="d-flex align-items-center mt-3 mt-sm-0">
-                                                <p className="mb-0 fs-13 mr-3">Average</p>
-                                                <h2 className="mb-0 text-black font-w600">45%</h2>
-                                            </div>
-                                        </div>
-                                        <div className="tab-content" id="myTabContent">
-                                            <div className="tab-pane fade show active" id="user" role="tabpanel">
-                                                <canvas id="activityLine" height="350"></canvas>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-6 col-xxl-12 col-lg-12">
-                                <div className="card">
-                                    <div className="card-header d-block d-sm-flex border-0 pb-0">
-                                        <div>
-                                            <h4 className="text-black fs-20">Cards</h4>
-                                            <p className="fs-13 mb-0">Lorem ipsum dolor sit amet, consectetur</p>
-                                        </div>
-                                        <div className="dropdown custom-dropdown mb-0 mt-3 mt-sm-0">
-                                            <div className="btn text-black bgl-light rounded-0" data-toggle="dropdown">
-                                                Settings
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g>
-                                                </svg>
-                                            </div>
-                                            <div className="dropdown-menu dropdown-menu-right">
-                                                <span className="dropdown-item" href="#">Details</span>
-                                                <span className="dropdown-item text-danger" href="#">Cancel</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card-body">
-                                        <div className="owl-bank-wallet owl-carousel owl-loaded owl-drag mb-4">
-                                            <div className="items">
-                                                <img className="mw-100" src="images/card/card1.jpg" alt="" />
-                                            </div>
-                                            <div className="items">
-                                                <img className="mw-100" src="images/card/card2.jpg" alt="" />
-                                            </div>
-                                            <div className="items">
-                                                <img className="mw-100" src="images/card/card3.jpg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div className="media align-items-center d-none d-sm-flex">
-                                            <div className="d-inline-block relative donut-chart-sale mr-4">
-                                                <span className="donut" data-peity='{ "fill": ["rgb(60, 75, 165)", "rgba(236, 236, 236, 1)"],   "innerRadius": 32, "radius": 10}'>7/8</span>
-                                                <small className="text-primary">71%</small>
-                                            </div>
-                                            <div className="media-body">
-                                                <p className="mb-2">Monthly Limits</p>
-                                                <h4 className="mb-0 text-black font-w600 fs-20">$20,000 of $100,000</h4>
-                                            </div>
-                                            <span className="btn btn-link ml-auto font-w700" href="#">View details</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div className="col-xl-6 col-xxl-8 col-lg-8">
                                 <div className="card">
                                     <div className="card-header d-block d-sm-flex border-0">
@@ -239,19 +915,19 @@ export default function Dashboard(props) {
                                         <div className="card-action card-tabs mt-3 mt-sm-0">
                                             <ul className="nav nav-tabs" role="tablist">
                                                 <li className="nav-item">
-                                                    <span className="nav-link active" data-toggle="tab" href="#monthly" role="tab">
+                                                    <a className="nav-link active" data-toggle="tab" href="#monthly" role="tab">
                                                         Monthly
-                                </span>
+											</a>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <span className="nav-link" data-toggle="tab" href="#Weekly" role="tab">
+                                                    <a className="nav-link" data-toggle="tab" href="#Weekly" role="tab">
                                                         Weekly
-                                </span>
+											</a>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <span className="nav-link" data-toggle="tab" href="#Today" role="tab">
+                                                    <a className="nav-link" data-toggle="tab" href="#Today" role="tab">
                                                         Today
-                                </span>
+											</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -279,11 +955,11 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Bitcoin
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">+$5,553</td>
-                                                            <td><span className="btn-link text-success float-right" href="#">Completed</span></td>
+                                                            <td><a className="btn-link text-success float-right" href="#">Completed</a></td>
                                                         </tr>
                                                         <tr>
                                                             <td>
@@ -303,12 +979,12 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Ethereum
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">-$542</td>
                                                             <td>
-                                                                <span className="btn-link text-dark float-right" href="#">Pending</span>
+                                                                <a className="btn-link text-dark float-right" href="#">Pending</a>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -328,12 +1004,12 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Ripple
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">-$912</td>
                                                             <td>
-                                                                <span className="btn-link text-danger float-right" href="#">Canceled</span>
+                                                                <a className="btn-link text-danger float-right" href="#">Canceled</a>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -352,12 +1028,12 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Litecoin
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">+$7,762</td>
                                                             <td>
-                                                                <span className="btn-link text-success float-right" href="#">Completed</span>
+                                                                <a className="btn-link text-success float-right" href="#">Completed</a>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -378,12 +1054,12 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Bitcoin
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">+$5,553</td>
                                                             <td>
-                                                                <span className="btn-link text-success float-right" href="#">Completed</span>
+                                                                <a className="btn-link text-success float-right" href="#">Completed</a>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -403,12 +1079,12 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Ripple
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">-$912</td>
                                                             <td>
-                                                                <span className="btn-link text-danger float-right" href="#">Canceled</span>
+                                                                <a className="btn-link text-danger float-right" href="#">Canceled</a>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -437,11 +1113,11 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Bitcoin
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">+$5,553</td>
-                                                            <td><span className="btn-link text-success float-right" href="#">Completed</span></td>
+                                                            <td><a className="btn-link text-success float-right" href="#">Completed</a></td>
                                                         </tr>
                                                         <tr>
                                                             <td>
@@ -461,12 +1137,12 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Ethereum
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">-$542</td>
                                                             <td>
-                                                                <span className="btn-link text-dark float-right" href="#">Pending</span>
+                                                                <a className="btn-link text-dark float-right" href="#">Pending</a>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -486,12 +1162,12 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Ripple
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">-$912</td>
                                                             <td>
-                                                                <span className="btn-link text-danger float-right" href="#">Canceled</span>
+                                                                <a className="btn-link text-danger float-right" href="#">Canceled</a>
                                                             </td>
                                                         </tr>
 
@@ -512,12 +1188,12 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Ripple
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">-$912</td>
                                                             <td>
-                                                                <span className="btn-link text-danger float-right" href="#">Canceled</span>
+                                                                <a className="btn-link text-danger float-right" href="#">Canceled</a>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -546,11 +1222,11 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Bitcoin
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">+$5,553</td>
-                                                            <td><span className="btn-link text-success float-right" href="#">Completed</span></td>
+                                                            <td><a className="btn-link text-success float-right" href="#">Completed</a></td>
                                                         </tr>
                                                         <tr>
                                                             <td>
@@ -570,12 +1246,12 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Ethereum
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">-$542</td>
                                                             <td>
-                                                                <span className="btn-link text-dark float-right" href="#">Pending</span>
+                                                                <a className="btn-link text-dark float-right" href="#">Pending</a>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -595,12 +1271,12 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Ripple
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">-$912</td>
                                                             <td>
-                                                                <span className="btn-link text-danger float-right" href="#">Canceled</span>
+                                                                <a className="btn-link text-danger float-right" href="#">Canceled</a>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -619,12 +1295,12 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Litecoin
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">+$7,762</td>
                                                             <td>
-                                                                <span className="btn-link text-success float-right" href="#">Completed</span>
+                                                                <a className="btn-link text-success float-right" href="#">Completed</a>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -645,12 +1321,12 @@ export default function Dashboard(props) {
                                                                         </svg>
                                                                     </span>
                                                                     Bitcoin
-                                            </div>
+														</div>
                                                             </td>
                                                             <td className="font-w500">06:24:45 AM</td>
                                                             <td className="font-w600 text-center">+$5,553</td>
                                                             <td>
-                                                                <span className="btn-link text-success float-right" href="#">Completed</span>
+                                                                <a className="btn-link text-success float-right" href="#">Completed</a>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -670,8 +1346,8 @@ export default function Dashboard(props) {
                                                 </svg>
                                             </div>
                                             <div className="dropdown-menu dropdown-menu-right">
-                                                <span className="dropdown-item" href="#">Details</span>
-                                                <span className="dropdown-item text-danger" href="#">Cancel</span>
+                                                <a className="dropdown-item" href="#">Details</a>
+                                                <a className="dropdown-item text-danger" href="#">Cancel</a>
                                             </div>
                                         </div>
                                     </div>
@@ -689,8 +1365,8 @@ export default function Dashboard(props) {
                                                 <i className="fa fa-angle-down scale5 ml-auto"></i>
                                             </div>
                                             <div className="dropdown-menu dropdown-menu-right">
-                                                <span className="dropdown-item" href="#">4 June 2020 - 4 July 2020</span>
-                                                <span className="dropdown-item" href="#">5 july 2020 - 4 Aug 2020</span>
+                                                <a className="dropdown-item" href="#">4 June 2020 - 4 July 2020</a>
+                                                <a className="dropdown-item" href="#">5 july 2020 - 4 Aug 2020</a>
                                             </div>
                                         </div>
 
@@ -749,7 +1425,7 @@ export default function Dashboard(props) {
                                         </div>
                                     </div>
                                     <div className="card-footer border-0 pt-0 text-center">
-                                        <span href="#" className="btn-link">Show more <i className="fa fa-caret-right ml-2 scale-2"></i></span>
+                                        <a href="#" className="btn-link">Show more <i className="fa fa-caret-right ml-2 scale-2"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -763,8 +1439,8 @@ export default function Dashboard(props) {
                                                 </svg>
                                             </div>
                                             <div className="dropdown-menu dropdown-menu-right">
-                                                <span className="dropdown-item" href="#">Details</span>
-                                                <span className="dropdown-item text-danger" href="#">Cancel</span>
+                                                <a className="dropdown-item" href="#">Details</a>
+                                                <a className="dropdown-item text-danger" href="#">Cancel</a>
                                             </div>
                                         </div>
                                     </div>
@@ -781,8 +1457,8 @@ export default function Dashboard(props) {
                                                 <i className="fa fa-angle-down scale5 ml-auto"></i>
                                             </div>
                                             <div className="dropdown-menu dropdown-menu-right">
-                                                <span className="dropdown-item" href="#">4 June 2020 - 4 July 2020</span>
-                                                <span className="dropdown-item" href="#">5 july 2020 - 4 Aug 2020</span>
+                                                <a className="dropdown-item" href="#">4 June 2020 - 4 July 2020</a>
+                                                <a className="dropdown-item" href="#">5 july 2020 - 4 Aug 2020</a>
                                             </div>
                                         </div>
 
@@ -841,7 +1517,7 @@ export default function Dashboard(props) {
                                         </div>
                                     </div>
                                     <div className="card-footer border-0 pt-0 text-center">
-                                        <span href="#" className="btn-link">Show more <i className="fa fa-caret-right ml-2 scale-2"></i></span>
+                                        <a href="#" className="btn-link">Show more <i className="fa fa-caret-right ml-2 scale-2"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -865,8 +1541,8 @@ export default function Dashboard(props) {
                                                 </svg>
                                             </div>
                                             <div className="dropdown-menu dropdown-menu-right">
-                                                <span className="dropdown-item" href="#">4 June 2020 - 4 July 2020</span>
-                                                <span className="dropdown-item" href="#">5 july 2020 - 4 Aug 2020</span>
+                                                <a className="dropdown-item" href="#">4 June 2020 - 4 July 2020</a>
+                                                <a className="dropdown-item" href="#">5 july 2020 - 4 Aug 2020</a>
                                             </div>
                                         </div>
                                     </div>
@@ -914,117 +1590,18 @@ export default function Dashboard(props) {
                                                 <p className="mb-0 fs-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
                                             </div>
                                             <div className="col-md-7 text-left mt-3 mt-sm-0 text-sm-right">
-                                                <span href="#" className="btn btn-success rounded-0 mb-2">
+                                                <a href="#" className="btn btn-success rounded-0 mb-2">
                                                     BUY
-                                <svg className="ml-4 scale3" width="16" height="16" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<svg className="ml-4 scale3" width="16" height="16" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M16.9638 11.5104L16.9721 14.9391L3.78954 1.7565C3.22815 1.19511 2.31799 1.19511 1.75661 1.7565C1.19522 2.31789 1.19522 3.22805 1.75661 3.78943L14.9392 16.972L11.5105 16.9637L11.5105 16.9637C10.7166 16.9619 10.0715 17.6039 10.0696 18.3978C10.0677 19.1919 10.7099 19.8369 11.5036 19.8388L11.5049 19.3388L11.5036 19.8388L18.3976 19.8554L18.4146 19.8555L18.4159 19.8555C18.418 19.8555 18.42 19.8555 18.422 19.8555C19.2131 19.8533 19.8528 19.2114 19.8555 18.4231C19.8556 18.4196 19.8556 18.4158 19.8556 18.4117L19.8389 11.5035L19.8389 11.5035C19.8369 10.7097 19.1919 10.0676 18.3979 10.0695C17.604 10.0713 16.9619 10.7164 16.9638 11.5103L16.9638 11.5104Z" fill="white" stroke="white"></path>
                                                     </svg>
-                                                </span>
-                                                <span href="#" className="btn ml-3 btn-danger rounded-0 mb-2">
+                                                </a>
+                                                <a href="#" className="btn ml-3 btn-danger rounded-0 mb-2">
                                                     SELL
-                            <svg className="ml-4 scale5" width="16" height="16" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<svg className="ml-4 scale5" width="16" height="16" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M5.35182 13.4965L5.35182 13.4965L5.33512 6.58823C5.33508 6.5844 5.3351 6.58084 5.33514 6.57759M5.35182 13.4965L5.83514 6.58306L5.33514 6.58221C5.33517 6.56908 5.33572 6.55882 5.33597 6.5545L5.33606 6.55298C5.33585 6.55628 5.33533 6.56514 5.33516 6.57648C5.33515 6.57684 5.33514 6.57721 5.33514 6.57759M5.35182 13.4965C5.35375 14.2903 5.99878 14.9324 6.79278 14.9305C7.58669 14.9287 8.22874 14.2836 8.22686 13.4897L8.22686 13.4896L8.21853 10.0609M5.35182 13.4965L8.21853 10.0609M5.33514 6.57759C5.33752 5.789 5.97736 5.14667 6.76872 5.14454C6.77041 5.14452 6.77217 5.14451 6.77397 5.14451L6.77603 5.1445L6.79319 5.14456L13.687 5.16121L13.6858 5.66121L13.687 5.16121C14.4807 5.16314 15.123 5.80809 15.1211 6.6022C15.1192 7.3961 14.4741 8.03814 13.6802 8.03626L13.6802 8.03626L10.2515 8.02798L23.4341 21.2106C23.9955 21.772 23.9955 22.6821 23.4341 23.2435C22.8727 23.8049 21.9625 23.8049 21.4011 23.2435L8.21853 10.0609M5.33514 6.57759C5.33513 6.57959 5.33514 6.58159 5.33514 6.5836L8.21853 10.0609M6.77407 5.14454C6.77472 5.14454 6.77537 5.14454 6.77603 5.14454L6.77407 5.14454Z" fill="white" stroke="white"></path>
                                                     </svg>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-6 col-xxl-12">
-                                <div className="card">
-                                    <div className="card-header d-block d-sm-flex border-0 pb-0">
-                                        <div>
-                                            <h4 className="fs-20 text-black">Quick Transfer</h4>
-                                            <p className="mb-0 fs-13">Lorem ipsum dolor sit amet, consectetur</p>
-                                        </div>
-                                        <div className="dropdown custom-dropdown d-block mt-3 mt-sm-0">
-                                            <div className="btn bgl-light d-flex align-items-center rounded-0 svg-btn " data-toggle="dropdown">
-                                                <i className="fa fa-angle-down scale5 mr-3"></i>
-                                                <div className="text-left ml-3">
-                                                    <span className="d-block fs-16 text-black">23,511 Ltc</span>
-                                                </div>
-                                                <svg className="ml-3" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M20.9999 0.00012207C9.40201 0.00012207 0 9.40213 0 21C0 32.5979 9.40201 41.9999 20.9999 41.9999C32.5978 41.9999 41.9998 32.5979 41.9998 21C41.9865 9.40762 32.5923 0.0133972 20.9999 0.00012207ZM28.4999 31.5002H16.5001C15.6715 31.5002 15 30.8287 15 30.0001C15 29.9292 15.005 29.8582 15.0151 29.7877L16.144 21.8844L13.8638 22.4548C13.7448 22.485 13.6226 22.5001 13.4999 22.5001C12.6714 22.4992 12.0007 21.8272 12.0012 20.9987C12.0021 20.3111 12.4699 19.7123 13.1369 19.5448L16.6017 18.6787L18.0148 8.78735C18.132 7.96704 18.8919 7.39758 19.7122 7.51477C20.5325 7.63196 21.102 8.39185 20.9848 9.21216L19.7443 17.8932L25.1363 16.5451C25.9387 16.3405 26.7549 16.8252 26.9591 17.6277C27.1637 18.4301 26.6789 19.2463 25.8765 19.451C25.8719 19.4519 25.8673 19.4532 25.8627 19.4542L19.2856 21.0984L18.2286 28.5H28.4999C29.3285 28.5 30 29.1716 30 30.0001C30 30.8282 29.3285 31.5002 28.4999 31.5002Z" fill="#5F5F5F" />
-                                                </svg>
-                                            </div>
-                                            <div className="dropdown-menu dropdown-menu-right">
-                                                <span className="dropdown-item" href="#">4 June 2020 - 4 July 2020</span>
-                                                <span className="dropdown-item" href="#">5 july 2020 - 4 Aug 2020</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card-body">
-                                        <div className="basic-form">
-                                            <form>
-                                                <div className="form-group">
-                                                    <div className="input-group input-group-lg">
-                                                        <div className="input-group-prepend">
-                                                            <span className="input-group-text bg-white border rounded-0">Amount BTC</span>
-                                                        </div>
-                                                        <input type="number" className="form-control rounded-0" placeholder="0,000000" />
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div className="d-flex justify-content-between align-items-center">
-                                            <h4 className="fs-20 text-black mb-0">Recent Contacts</h4>
-                                            <span href="#" className="btn btn-link">View more</span>
-                                        </div>
-                                        <div className="testimonial-one owl-right-nav owl-carousel owl-loaded owl-drag">
-                                            <div className="items">
-                                                <div>
-                                                    <img className="mb-3" src="images/profile/10.jpg" alt="" />
-                                                    <h5 className="text-black mb-0">Samuel</h5>
-                                                    <span className="fs-12">@sam224</span>
-                                                </div>
-                                            </div>
-                                            <div className="items">
-                                                <div>
-                                                    <img className="mb-3" src="images/profile/11.jpg" alt="" />
-                                                    <h5 className="text-black mb-0">Cindy</h5>
-                                                    <span className="fs-12">@cindyss</span>
-                                                </div>
-                                            </div>
-                                            <div className="items">
-                                                <div>
-                                                    <img className="mb-3" src="images/profile/12.jpg" alt="" />
-                                                    <h5 className="text-black mb-0">David</h5>
-                                                    <span className="fs-12">@davidxc</span>
-                                                </div>
-                                            </div>
-                                            <div className="items">
-                                                <div>
-                                                    <img className="mb-3" src="images/profile/13.jpg" alt="" />
-                                                    <h5 className="text-black mb-0">Martha </h5>
-                                                    <span className="fs-12">@marthaa</span>
-                                                </div>
-                                            </div>
-                                            <div className="items">
-                                                <div>
-                                                    <img className="mb-3" src="images/profile/14.jpg" alt="" />
-                                                    <h5 className="text-black mb-0">Olivia </h5>
-                                                    <span className="fs-12">@oliv62</span>
-                                                </div>
-                                            </div>
-                                            <div className="items">
-                                                <div>
-                                                    <img className="mb-3" src="images/profile/15.jpg" alt="" />
-                                                    <h5 className="text-black mb-0">Bella</h5>
-                                                    <span className="fs-12">@bellazz</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card-footer border-0 pt-0">
-                                        <div className="row align-items-center">
-                                            <div className="col-md-7">
-                                                <p className="mb-0 fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                            </div>
-                                            <div className="col-md-5 text-right">
-                                                <span href="#" className="btn btn-primary d-block rounded-0 mt-3 mt-md-0">
-                                                    TRANSFER NOW
-                            </span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -1032,358 +1609,8 @@ export default function Dashboard(props) {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="header top-0 absolute">
-                    <div class="header-content">
-                        <nav class="navbar navbar-expand">
-                            <div class="collapse navbar-collapse justify-content-between">
-                                <div class="header-left">
-                                    <div class="dashboard_bar">
-                                        Dashboard
-                        </div>
-                                </div>
-
-                                <ul class="navbar-nav header-right">
-                                    <li class="nav-item dropdown notification_dropdown">
-                                        <a class="nav-link  ai-icon" href="#" role="button" data-toggle="dropdown">
-                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M21.75 14.8385V12.0463C21.7471 9.88552 20.9385 7.80353 19.4821 6.20735C18.0258 4.61116 16.0264 3.61555 13.875 3.41516V1.625C13.875 1.39294 13.7828 1.17038 13.6187 1.00628C13.4546 0.842187 13.2321 0.75 13 0.75C12.7679 0.75 12.5454 0.842187 12.3813 1.00628C12.2172 1.17038 12.125 1.39294 12.125 1.625V3.41534C9.97361 3.61572 7.97429 4.61131 6.51794 6.20746C5.06159 7.80361 4.25291 9.88555 4.25 12.0463V14.8383C3.26257 15.0412 2.37529 15.5784 1.73774 16.3593C1.10019 17.1401 0.751339 18.1169 0.75 19.125C0.750764 19.821 1.02757 20.4882 1.51969 20.9803C2.01181 21.4724 2.67904 21.7492 3.375 21.75H8.71346C8.91521 22.738 9.45205 23.6259 10.2331 24.2636C11.0142 24.9013 11.9916 25.2497 13 25.2497C14.0084 25.2497 14.9858 24.9013 15.7669 24.2636C16.548 23.6259 17.0848 22.738 17.2865 21.75H22.625C23.321 21.7492 23.9882 21.4724 24.4803 20.9803C24.9724 20.4882 25.2492 19.821 25.25 19.125C25.2486 18.117 24.8998 17.1402 24.2622 16.3594C23.6247 15.5786 22.7374 15.0414 21.75 14.8385ZM6 12.0463C6.00232 10.2113 6.73226 8.45223 8.02974 7.15474C9.32723 5.85726 11.0863 5.12732 12.9212 5.125H13.0788C14.9137 5.12732 16.6728 5.85726 17.9703 7.15474C19.2677 8.45223 19.9977 10.2113 20 12.0463V14.75H6V12.0463ZM13 23.5C12.4589 23.4983 11.9316 23.3292 11.4905 23.0159C11.0493 22.7026 10.716 22.2604 10.5363 21.75H15.4637C15.284 22.2604 14.9507 22.7026 14.5095 23.0159C14.0684 23.3292 13.5411 23.4983 13 23.5ZM22.625 20H3.375C3.14298 19.9999 2.9205 19.9076 2.75644 19.7436C2.59237 19.5795 2.50014 19.357 2.5 19.125C2.50076 18.429 2.77757 17.7618 3.26969 17.2697C3.76181 16.7776 4.42904 16.5008 5.125 16.5H20.875C21.571 16.5008 22.2382 16.7776 22.7303 17.2697C23.2224 17.7618 23.4992 18.429 23.5 19.125C23.4999 19.357 23.4076 19.5795 23.2436 19.7436C23.0795 19.9076 22.857 19.9999 22.625 20Z" fill="#6418C3"></path>
-                                            </svg>
-                                            <span class="badge light text-white bg-primary">12</span>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <div id="DZ_W_Notification1" class="widget-media dz-scroll p-3 height380 ps">
-                                                <ul class="timeline">
-                                                    <li>
-                                                        <div class="timeline-panel">
-                                                            <div class="media mr-2">
-                                                                <img alt="image" width="50" src="images/avatar/1.jpg" />
-                                                            </div>
-                                                            <div class="media-body">
-                                                                <h6 class="mb-1">Dr sultads Send you Photo</h6>
-                                                                <small class="d-block">29 July 2020 - 02:26 PM</small>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-panel">
-                                                            <div class="media mr-2 media-info">
-                                                                KG
-                                                </div>
-                                                            <div class="media-body">
-                                                                <h6 class="mb-1">Resport created successfully</h6>
-                                                                <small class="d-block">29 July 2020 - 02:26 PM</small>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-panel">
-                                                            <div class="media mr-2 media-success">
-                                                                <i class="fa fa-home"></i>
-                                                            </div>
-                                                            <div class="media-body">
-                                                                <h6 class="mb-1">Reminder : Treatment Time!</h6>
-                                                                <small class="d-block">29 July 2020 - 02:26 PM</small>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-panel">
-                                                            <div class="media mr-2">
-                                                                <img alt="image" width="50" src="images/avatar/1.jpg" />
-                                                            </div>
-                                                            <div class="media-body">
-                                                                <h6 class="mb-1">Dr sultads Send you Photo</h6>
-                                                                <small class="d-block">29 July 2020 - 02:26 PM</small>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-panel">
-                                                            <div class="media mr-2 media-danger">
-                                                                KG
-                                                </div>
-                                                            <div class="media-body">
-                                                                <h6 class="mb-1">Resport created successfully</h6>
-                                                                <small class="d-block">29 July 2020 - 02:26 PM</small>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-panel">
-                                                            <div class="media mr-2 media-primary">
-                                                                <i class="fa fa-home"></i>
-                                                            </div>
-                                                            <div class="media-body">
-                                                                <h6 class="mb-1">Reminder : Treatment Time!</h6>
-                                                                <small class="d-block">29 July 2020 - 02:26 PM</small>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <div class="ps__rail-x" ><div class="ps__thumb-x" tabindex="0" ></div></div><div class="ps__rail-y" ><div class="ps__thumb-y" tabindex="0" ></div></div></div>
-                                            <a class="all-notification" href="#">See all notifications <i class="ti-arrow-right"></i></a>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item dropdown notification_dropdown">
-                                        <a class="nav-link bell bell-link" href="#">
-                                            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M20.4604 0.848877H3.31682C2.64742 0.849612 2.00565 1.11586 1.53231 1.58919C1.05897 2.06253 0.792727 2.7043 0.791992 3.3737V15.1562C0.792727 15.8256 1.05897 16.4674 1.53231 16.9407C2.00565 17.4141 2.64742 17.6803 3.31682 17.6811C3.53999 17.6812 3.75398 17.7699 3.91178 17.9277C4.06958 18.0855 4.15829 18.2995 4.15843 18.5227V20.3168C4.15843 20.6215 4.24112 20.9204 4.39768 21.1818C4.55423 21.4431 4.77879 21.6571 5.04741 21.8009C5.31602 21.9446 5.61861 22.0128 5.92292 21.9981C6.22723 21.9834 6.52183 21.8863 6.77533 21.7173L12.6173 17.8224C12.7554 17.7299 12.9179 17.6807 13.0841 17.6811H17.187C17.7383 17.68 18.2742 17.4994 18.7136 17.1664C19.1531 16.8335 19.472 16.3664 19.6222 15.8359L22.8965 4.05011C22.9998 3.67481 23.0152 3.28074 22.9413 2.89856C22.8674 2.51637 22.7064 2.15639 22.4707 1.84663C22.2349 1.53687 21.9309 1.28568 21.5822 1.11263C21.2336 0.939571 20.8497 0.849312 20.4604 0.848877ZM21.2732 3.60304L18.0005 15.3847C17.9499 15.5614 17.8432 15.7168 17.6964 15.8275C17.5496 15.9381 17.3708 15.9979 17.187 15.9978H13.0841C12.5855 15.9972 12.098 16.1448 11.6836 16.4219L5.84165 20.3168V18.5227C5.84091 17.8533 5.57467 17.2115 5.10133 16.7382C4.62799 16.2648 3.98622 15.9986 3.31682 15.9978C3.09365 15.9977 2.87966 15.909 2.72186 15.7512C2.56406 15.5934 2.47534 15.3794 2.47521 15.1562V3.3737C2.47534 3.15054 2.56406 2.93655 2.72186 2.77874C2.87966 2.62094 3.09365 2.53223 3.31682 2.5321H20.4604C20.5905 2.53243 20.7187 2.56277 20.8352 2.62076C20.9516 2.67875 21.0531 2.76283 21.1318 2.86646C21.2104 2.97008 21.2641 3.09045 21.2886 3.21821C21.3132 3.34597 21.3079 3.47766 21.2732 3.60304Z" fill="#6418C3"></path>
-                                                <path d="M5.84161 8.42333H10.0497C10.2729 8.42333 10.4869 8.33466 10.6448 8.17683C10.8026 8.019 10.8913 7.80493 10.8913 7.58172C10.8913 7.35851 10.8026 7.14445 10.6448 6.98661C10.4869 6.82878 10.2729 6.74011 10.0497 6.74011H5.84161C5.6184 6.74011 5.40433 6.82878 5.2465 6.98661C5.08867 7.14445 5 7.35851 5 7.58172C5 7.80493 5.08867 8.019 5.2465 8.17683C5.40433 8.33466 5.6184 8.42333 5.84161 8.42333Z" fill="#6418C3"></path>
-                                                <path d="M13.4161 10.1066H5.84161C5.6184 10.1066 5.40433 10.1952 5.2465 10.3531C5.08867 10.5109 5 10.725 5 10.9482C5 11.1714 5.08867 11.3855 5.2465 11.5433C5.40433 11.7011 5.6184 11.7898 5.84161 11.7898H13.4161C13.6393 11.7898 13.8534 11.7011 14.0112 11.5433C14.169 11.3855 14.2577 11.1714 14.2577 10.9482C14.2577 10.725 14.169 10.5109 14.0112 10.3531C13.8534 10.1952 13.6393 10.1066 13.4161 10.1066Z" fill="#6418C3"></path>
-                                            </svg>
-                                            <span class="badge light text-white bg-primary">5</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item dropdown notification_dropdown">
-                                        <a class="nav-link" href="#" data-toggle="dropdown">
-                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M22.625 5.12506H21.75V1.62506C21.75 1.47268 21.7102 1.32295 21.6345 1.19068C21.5589 1.05841 21.45 0.948189 21.3186 0.870929C21.1873 0.79367 21.0381 0.75205 20.8857 0.750187C20.7333 0.748325 20.5831 0.786285 20.4499 0.860311L13 4.99915L5.55007 0.860311C5.41688 0.786285 5.26667 0.748325 5.11431 0.750187C4.96194 0.75205 4.8127 0.79367 4.68136 0.870929C4.55002 0.948189 4.44113 1.05841 4.36547 1.19068C4.28981 1.32295 4.25001 1.47268 4.25 1.62506V5.12506H3.375C2.67904 5.12582 2.01181 5.40263 1.51969 5.89475C1.02757 6.38687 0.750764 7.0541 0.75 7.75006V10.3751C0.750764 11.071 1.02757 11.7383 1.51969 12.2304C2.01181 12.7225 2.67904 12.9993 3.375 13.0001H4.25V22.6251C4.25076 23.321 4.52757 23.9882 5.01969 24.4804C5.51181 24.9725 6.17904 25.2493 6.875 25.2501H19.125C19.821 25.2493 20.4882 24.9725 20.9803 24.4804C21.4724 23.9882 21.7492 23.321 21.75 22.6251V13.0001H22.625C23.321 12.9993 23.9882 12.7225 24.4803 12.2304C24.9724 11.7383 25.2492 11.071 25.25 10.3751V7.75006C25.2492 7.0541 24.9724 6.38687 24.4803 5.89475C23.9882 5.40263 23.321 5.12582 22.625 5.12506ZM20 5.12506H16.3769L20 3.11256V5.12506ZM6 3.11256L9.62311 5.12506H6V3.11256ZM6 22.6251V13.0001H12.125V23.5001H6.875C6.64303 23.4998 6.42064 23.4075 6.25661 23.2434C6.09258 23.0794 6.0003 22.857 6 22.6251ZM20 22.6251C19.9997 22.857 19.9074 23.0794 19.7434 23.2434C19.5794 23.4075 19.357 23.4998 19.125 23.5001H13.875V13.0001H20V22.6251ZM23.5 10.3751C23.4997 10.607 23.4074 10.8294 23.2434 10.9934C23.0794 11.1575 22.857 11.2498 22.625 11.2501H3.375C3.14303 11.2498 2.92064 11.1575 2.75661 10.9934C2.59258 10.8294 2.5003 10.607 2.5 10.3751V7.75006C2.5003 7.51809 2.59258 7.2957 2.75661 7.13167C2.92064 6.96764 3.14303 6.87536 3.375 6.87506H22.625C22.857 6.87536 23.0794 6.96764 23.2434 7.13167C23.4074 7.2957 23.4997 7.51809 23.5 7.75006V10.3751Z" fill="#3E4954"></path>
-                                            </svg>
-                                            <span class="badge light text-white bg-primary">2</span>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <div id="DZ_W_TimeLine02" class="widget-timeline dz-scroll style-1 ps p-3 height370">
-                                                <ul class="timeline">
-                                                    <li>
-                                                        <div class="timeline-badge primary"></div>
-                                                        <a class="timeline-panel text-muted" href="#">
-                                                            <span>10 minutes ago</span>
-                                                            <h6 class="mb-0">Youtube, a video-sharing website, goes live <strong class="text-primary">$500</strong>.</h6>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge info">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="#">
-                                                            <span>20 minutes ago</span>
-                                                            <h6 class="mb-0">New order placed <strong class="text-info">#XF-2356.</strong></h6>
-                                                            <p class="mb-0">Quisque a consequat ante Sit amet magna at volutapt...</p>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge danger">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="#">
-                                                            <span>30 minutes ago</span>
-                                                            <h6 class="mb-0">john just buy your product <strong class="text-warning">Sell $250</strong></h6>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge success">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="#">
-                                                            <span>15 minutes ago</span>
-                                                            <h6 class="mb-0">StumbleUpon is acquired by eBay. </h6>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge warning">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="#">
-                                                            <span>20 minutes ago</span>
-                                                            <h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge dark">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="#">
-                                                            <span>20 minutes ago</span>
-                                                            <h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                                <div class="ps__rail-x" ><div class="ps__thumb-x" tabindex="0" ></div></div><div class="ps__rail-y" ><div class="ps__thumb-y" tabindex="0" ></div></div></div>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item dropdown header-profile">
-                                        <a class="nav-link" href="#" role="button" data-toggle="dropdown">
-                                            <div class="header-info">
-                                                <span class="text-black">Hello, <strong>Thomas</strong></span>
-                                                <p class="fs-12 mb-0">Super Admin</p>
-                                            </div>
-                                            <img src="images/profile/pic1.jpg" width="20" alt="" />
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a href="./app-profile.html" class="dropdown-item ai-icon">
-                                                <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                                <span class="ml-2">Profile </span>
-                                            </a>
-                                            <a href="./email-inbox.html" class="dropdown-item ai-icon">
-                                                <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                                <span class="ml-2">Inbox </span>
-                                            </a>
-                                            <a href="./page-login.html" class="dropdown-item ai-icon">
-                                                <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-                                                <span class="ml-2">Logout </span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-
-                <div class="deznav">
-                    <div class="deznav-scroll mm-active ps">
-                        <ul class="metismenu mm-show" id="menu">
-                            <li class="mm-active"><a class="has-arrow ai-icon" href="#" aria-expanded="false">
-                                <i class="flaticon-381-networking"></i>
-                                <span class="nav-text">Dashboard</span>
-                            </a>
-                                <ul aria-expanded="false" class="mm-collapse mm-show">
-                                    <li class="mm-active"><a href="index.html" class="mm-active">Dashboard</a></li>
-                                    <li><a href="my-wallet.html">My Wallet</a></li>
-                                    <li><a href="coin-details.html">Coin Details</a></li>
-                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                    <li><a href="transactions.html">Transactions</a></li>
-                                    <li><a href="market-capital.html">Market Capital</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="has-arrow ai-icon" href="#" aria-expanded="false">
-                                <i class="flaticon-381-television"></i>
-                                <span class="nav-text">Apps</span>
-                            </a>
-                                <ul aria-expanded="false" class="mm-collapse">
-                                    <li><a href="./app-profile.html">Profile</a></li>
-                                    <li><a class="has-arrow" href="#" aria-expanded="false">Email</a>
-                                        <ul aria-expanded="false" class="mm-collapse">
-                                            <li><a href="./email-compose.html">Compose</a></li>
-                                            <li><a href="./email-inbox.html">Inbox</a></li>
-                                            <li><a href="./email-read.html">Read</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="./app-calender.html">Calendar</a></li>
-                                    <li><a class="has-arrow" href="#" aria-expanded="false">Shop</a>
-                                        <ul aria-expanded="false" class="mm-collapse">
-                                            <li><a href="./ecom-product-grid.html">Product Grid</a></li>
-                                            <li><a href="./ecom-product-list.html">Product List</a></li>
-                                            <li><a href="./ecom-product-detail.html">Product Details</a></li>
-                                            <li><a href="./ecom-product-order.html">Order</a></li>
-                                            <li><a href="./ecom-checkout.html">Checkout</a></li>
-                                            <li><a href="./ecom-invoice.html">Invoice</a></li>
-                                            <li><a href="./ecom-customers.html">Customers</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a class="has-arrow ai-icon" href="#" aria-expanded="false">
-                                <i class="flaticon-381-controls-3"></i>
-                                <span class="nav-text">Charts</span>
-                            </a>
-                                <ul aria-expanded="false" class="mm-collapse">
-                                    <li><a href="./chart-flot.html">Flot</a></li>
-                                    <li><a href="./chart-morris.html">Morris</a></li>
-                                    <li><a href="./chart-chartjs.html">Chartjs</a></li>
-                                    <li><a href="./chart-chartist.html">Chartist</a></li>
-                                    <li><a href="./chart-sparkline.html">Sparkline</a></li>
-                                    <li><a href="./chart-peity.html">Peity</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="has-arrow ai-icon" href="#" aria-expanded="false">
-                                <i class="flaticon-381-internet"></i>
-                                <span class="nav-text">Bootstrap</span>
-                            </a>
-                                <ul aria-expanded="false" class="mm-collapse">
-                                    <li><a href="./ui-accordion.html">Accordion</a></li>
-                                    <li><a href="./ui-alert.html">Alert</a></li>
-                                    <li><a href="./ui-badge.html">Badge</a></li>
-                                    <li><a href="./ui-button.html">Button</a></li>
-                                    <li><a href="./ui-modal.html">Modal</a></li>
-                                    <li><a href="./ui-button-group.html">Button Group</a></li>
-                                    <li><a href="./ui-list-group.html">List Group</a></li>
-                                    <li><a href="./ui-media-object.html">Media Object</a></li>
-                                    <li><a href="./ui-card.html">Cards</a></li>
-                                    <li><a href="./ui-carousel.html">Carousel</a></li>
-                                    <li><a href="./ui-dropdown.html">Dropdown</a></li>
-                                    <li><a href="./ui-popover.html">Popover</a></li>
-                                    <li><a href="./ui-progressbar.html">Progressbar</a></li>
-                                    <li><a href="./ui-tab.html">Tab</a></li>
-                                    <li><a href="./ui-typography.html">Typography</a></li>
-                                    <li><a href="./ui-pagination.html">Pagination</a></li>
-                                    <li><a href="./ui-grid.html">Grid</a></li>
-
-                                </ul>
-                            </li>
-                            <li><a class="has-arrow ai-icon" href="#" aria-expanded="false">
-                                <i class="flaticon-381-heart"></i>
-                                <span class="nav-text">Plugins</span>
-                            </a>
-                                <ul aria-expanded="false" class="mm-collapse">
-                                    <li><a href="./uc-select2.html">Select 2</a></li>
-                                    <li><a href="./uc-nestable.html">Nestedable</a></li>
-                                    <li><a href="./uc-noui-slider.html">Noui Slider</a></li>
-                                    <li><a href="./uc-sweetalert.html">Sweet Alert</a></li>
-                                    <li><a href="./uc-toastr.html">Toastr</a></li>
-                                    <li><a href="./map-jqvmap.html">Jqv Map</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
-                                <i class="flaticon-381-settings-2"></i>
-                                <span class="nav-text">Widget</span>
-                            </a>
-                            </li>
-                            <li><a class="has-arrow ai-icon" href="#" aria-expanded="false">
-                                <i class="flaticon-381-notepad"></i>
-                                <span class="nav-text">Forms</span>
-                            </a>
-                                <ul aria-expanded="false" class="mm-collapse">
-                                    <li><a href="./form-element.html">Form Elements</a></li>
-                                    <li><a href="./form-wizard.html">Wizard</a></li>
-                                    <li><a href="./form-editor-summernote.html">Summernote</a></li>
-                                    <li><a href="form-pickers.html">Pickers</a></li>
-                                    <li><a href="form-validation-jquery.html">Jquery Validate</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="has-arrow ai-icon" href="#" aria-expanded="false">
-                                <i class="flaticon-381-network"></i>
-                                <span class="nav-text">Table</span>
-                            </a>
-                                <ul aria-expanded="false" class="mm-collapse">
-                                    <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
-                                    <li><a href="table-datatable-basic.html">Datatable</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="has-arrow ai-icon" href="#" aria-expanded="false">
-                                <i class="flaticon-381-layer-1"></i>
-                                <span class="nav-text">Pages</span>
-                            </a>
-                                <ul aria-expanded="false" class="mm-collapse">
-                                    <li><a href="./page-register.html">Register</a></li>
-                                    <li><a href="./page-login.html">Login</a></li>
-                                    <li><a class="has-arrow" href="#" aria-expanded="false">Error</a>
-                                        <ul aria-expanded="false" class="mm-collapse">
-                                            <li><a href="./page-error-400.html">Error 400</a></li>
-                                            <li><a href="./page-error-403.html">Error 403</a></li>
-                                            <li><a href="./page-error-404.html">Error 404</a></li>
-                                            <li><a href="./page-error-500.html">Error 500</a></li>
-                                            <li><a href="./page-error-503.html">Error 503</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="./page-lock-screen.html">Lock Screen</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <div class="add-menu-sidebar">
-                            <p>Generate Monthly Credit Report</p>
-                            <a href="#">
-                                <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M23.725 5.14889C23.7248 5.14861 23.7245 5.14828 23.7242 5.148L18.8256 0.272997C18.4586 -0.0922062 17.865 -0.0908471 17.4997 0.276184C17.1345 0.643169 17.1359 1.23675 17.5028 1.602L20.7918 4.875H0.9375C0.419719 4.875 0 5.29472 0 5.8125C0 6.33028 0.419719 6.75 0.9375 6.75H20.7917L17.5029 10.023C17.1359 10.3882 17.1345 10.9818 17.4998 11.3488C17.865 11.7159 18.4587 11.7172 18.8256 11.352L23.7242 6.477C23.7245 6.47672 23.7248 6.47639 23.7251 6.47611C24.0923 6.10964 24.0911 5.51414 23.725 5.14889Z" fill="white"></path>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="copyright">
-                            <p><strong>Chrev - Crypto Admin Dashboard</strong> © 2020 All Rights Reserved</p>
-                            <p>Made with <i class="fa fa-heart"></i> by DexignZone</p>
-                        </div>
-                        <div class="ps__rail-x" ><div class="ps__thumb-x" tabindex="0" ></div></div><div class="ps__rail-y" ><div class="ps__thumb-y" tabindex="0" ></div></div></div>
                 </div>
             </div>
-
         </div>
     );
 }
