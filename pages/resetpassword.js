@@ -7,8 +7,14 @@ export default function PasswordReset(props) {
 
     const handleSubmit = e => {
         e.preventDefault();
+        if(match === true){
+            alert("passwords match");
 
-        // const request = fetch(`https://onos-btc.herokuapp.com/api/auth/reset-password/`)
+            const request = fetch(`https://onos-btc.herokuapp.com/api/auth/reset-password/`);
+        }else{
+            alert("passwords do not match");
+        }
+
     }
 
     return (
@@ -45,7 +51,7 @@ export default function PasswordReset(props) {
                         type="password" />
                     </div>
                     <div className="d-flex justify-center">
-                        <button className="login-input bg-blue text-white w-50" type="submit">Change</button>
+                        <button className="login-input bg-blue text-white w-50" type="submit">Update Password</button>
                     </div>
                 </form>
             </div>
